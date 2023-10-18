@@ -4,15 +4,14 @@ FROM node:18-alpine
 WORKDIR /app
 
 # install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json .
 RUN npm install
-RUN npm install react-scripts@5.0.1 -g
 
 # add app
-COPY . ./
+COPY . .
+RUN npm run build
 
-EXPOSE 8080
+FROM nginx
+EXPOSE 80
 
-# start app
-CMD ["npm", "start"]
+COPY --from=builder /app/build usr/share/nginx/html
