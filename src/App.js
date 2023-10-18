@@ -3,7 +3,12 @@ import React, { Component } from 'react';
 const uuid = require('uuid');
 
 function getExtension(filename) {
-  return filename.split('.').pop()
+  let ext = filename.split('.').pop()
+  if (ext === 'jpg') {
+    return 'jpeg'
+  } else {
+    return ext
+  }
 }
 
 
