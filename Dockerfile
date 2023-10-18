@@ -1,10 +1,5 @@
 FROM node:18-alpine
 
-# install aws cli
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" -y
-RUN unzip awscliv2.zip
-RUN sudo ./aws/install
-
 # set working directory
 WORKDIR /app
 
