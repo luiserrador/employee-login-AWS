@@ -9,10 +9,13 @@ The figure below shows how to add an employee to the database by uploading a pic
 </p>
 
 ## Architecture
+<p align=center>
+ <img src='https://github.com/luiserrador/employee-login-AWS/blob/main/pics/architecture.png'>
+</p>
 
 ### TODO
 * [ ] Add photo to database and authentication via camera;
-* [ ] Improve front-end (I am not the best on front-end development);
+* [ ] Improve frontend (I am not the best on frontend development);
 * [ ] Separate access to add employee - it should not be in the same endpoint as authentication (it is just a demo).
 
 <!-- # Getting Started with Create React App
