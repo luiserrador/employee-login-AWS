@@ -5,12 +5,12 @@ The project was deployed via AWS, is running on a t2.micro EC2 instance and can 
 
 The figure below shows how to add an employee to the database by uploading a picture of the employee and then logging in with a different picture of the same employee. 📷🔀👤
 <p align=center>
- <img src='https://github.com/luiserrador/employee-login-AWS/blob/main/pics/gif_employee_login.gif'>
+ <img src='https://github.com/luiserrador/employee-login-AWS/blob/main/pics/gif_employee_login.gif' width=600>
 </p>
 
 ## Architecture
 <p align=center>
- <img src='https://github.com/luiserrador/employee-login-AWS/blob/main/pics/architecture.png' width=750>
+ <img src='https://github.com/luiserrador/employee-login-AWS/blob/main/pics/architecture.png' width=600>
 </p>
 
 ### TODO
