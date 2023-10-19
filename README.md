@@ -1,7 +1,7 @@
 # Employee Facial Login
 This project 
 
-![](https://github.com/luiserrador/employee-login-AWS/pics/gif_employee_login.gif)
+![](https://github.com/luiserrador/employee-login-AWS/blob/pics/gif_employee_login.gif)
 
 <!-- # Getting Started with Create React App
 
