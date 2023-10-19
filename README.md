@@ -10,7 +10,7 @@ The figure below shows how to add an employee to the database by uploading a pic
 
 ## Architecture
 <p align=center>
- <img src='https://github.com/luiserrador/employee-login-AWS/blob/main/pics/architecture.png' width=250>
+ <img src='https://github.com/luiserrador/employee-login-AWS/blob/main/pics/architecture.png' width=500>
 </p>
 
 ### TODO
