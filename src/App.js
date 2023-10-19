@@ -96,21 +96,6 @@ class App extends Component {
       console.error(error);
     })
   }
-/*  {
-    const formData = new FormData();
-    const fileName = this.state.firstName + "_" + this.state.lastName + "." + getExtension(this.state.selectedFile.name);
-
-    formData.append(
-      "demo file",
-      this.state.selectedFile,
-    )
-    //call api
-    axios.post("https://ycnitaxs3m.execute-api.us-east-1.amazonaws.com/prod/file-upload", formData).then(() => {
-      this.setState({selectedFile: null});
-      this.setState({fileUploadedSuccessfully: true});
-    })
-  }
-*/
 
   onFirstNameChange = e => {
     this.setState({firstName: e.target.value});
@@ -164,9 +149,6 @@ class App extends Component {
           <h2>File Details:</h2>
           <p>File Name: {this.state.selectedFile.name}</p>
           <p>File Type: {this.state.selectedFile.type}</p>
-          <p>Last Modified: {" "}
-            {this.state.selectedFile.lastModifiedDate.toDateString()}
-          </p>
         </div>
       )
     } else if (this.state.fileUploadedSuccessfully) {
@@ -198,7 +180,7 @@ class App extends Component {
           </button>
           <div className={this.state.isAuth ? 'success' : 'failure'}>{this.state.uploadResultMessage}</div>
         </div>
-        {/* {this.fileData()} */}
+        {this.fileData()}
         {this.addEmployee()}
       </div>
     )
