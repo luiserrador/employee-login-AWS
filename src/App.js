@@ -37,14 +37,17 @@ class App extends Component {
     addingEmployee: false,
     fileUploadedSuccessfully: false,
     uploadResultMessage: 'Please upload an image to authenticate.',
+    uploadAddEmployeeMessage: 'Click to add employee to database.',
     isAuth: false
   }
 
   onAddEmployee = () => {
     if (this.state.addingEmployee) {
       this.setState({addingEmployee: false});
+      this.setState({uploadAddEmployeeMessage: 'Click to add employee to database.'});
     } else {
       this.setState({addingEmployee: true});
+      this.setState({uploadAddEmployeeMessage: 'Please upload an image to add employee to database.'});
     }
   }
 
@@ -66,6 +69,9 @@ class App extends Component {
         'Content-Type': `image/${img_extension}`
       },
       body: this.state.selectedFileEmployee
+    }).then(async () => {
+      this.onAddEmployee();
+      this.setState({uploadAddEmployeeMessage: 'Successfully employee added!'});
     }).catch(error => {
       console.error(error);
     })
@@ -180,8 +186,9 @@ class App extends Component {
           </button>
           <div className={this.state.isAuth ? 'success' : 'failure'}>{this.state.uploadResultMessage}</div>
         </div>
-        {this.fileData()}
+        {/* {this.fileData()}*/}
         {this.addEmployee()}
+        <div>{this.state.uploadAddEmployeeMessage}</div>
       </div>
     )
   }
